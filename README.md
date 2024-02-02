@@ -25,7 +25,7 @@
    <img src="http://gpt.sqlgpt.cn/download/img/1.png">
    <img src="http://gpt.sqlgpt.cn/download/img/2.png">
    
-3. 进入开发机在开发机上打开一个终端，下载[FastChat代码](https://github.com/lm-sys/FastChat)，如果无法通过一下命令下载，可以手动下载之后上传到开发机上
+3. 进入开发机在开发机上打开一个终端，下载[FastChat代码](https://github.com/lm-sys/FastChat)，如果无法通过以下命令下载，可以手动下载之后上传到开发机上
 ```bash
 git clone https://github.com/lm-sys/FastChat
 ```
