@@ -25,16 +25,15 @@
    <img src="http://gpt.sqlgpt.cn/download/img/1.png">
    <img src="http://gpt.sqlgpt.cn/download/img/2.png">
    
-3. 进入开发机在开发机上打开一个终端，下载开源的[FastChat代码](https://github.com/lm-sys/FastChat)，如果无法通过以下命令下载，可以手动下载之后上传到开发机上
+3. 进入开发机在开发机上打开一个终端，安装[FastChat](https://github.com/lm-sys/FastChat)
 ```bash
-git clone https://github.com/lm-sys/FastChat
-```
-4. 进入FastChat代码文件夹执行如下命令来启动InternLM模型，InternLM各个版本的模型默认放在/root/share/model_repos/文件夹下，启动不同的模型只需修改如下命令中的模型路径即可，如果读者是使用的其他云平台，可以手动[下载模型](https://github.com/InternLM/InternLM)并将模型放在任意路径下，然后修改如下命令中的模型路径即可
-```
 conda create -n fastchat python=3.10 -y
 conda activate fastchat
 pip install "fschat[model_worker,webui]" -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install einops -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+4. 执行如下命令来启动InternLM模型，InternLM各个版本的模型默认放在/root/share/model_repos/文件夹下，启动不同的模型只需修改如下命令中的模型路径即可，如果读者是使用的其他云平台，可以手动[下载模型](https://github.com/InternLM/InternLM)并将模型放在任意路径下，然后修改如下命令中的模型路径即可
+```
 python -m fastchat.serve.controller --host 0.0.0.0 --port 21001
 python -m fastchat.serve.model_worker --model-path /root/share/model_repos/internlm2-7b --host 0.0.0.0
 python -m fastchat.serve.test_message --model-name internlm2-7b
